@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2024 Joël de Kanter
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -24,4 +24,15 @@ module tt_um_example (
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
+  /* idea space:
+  internal CLK -> CLK Selector
+  external CLK -> CLK Selector
+  CLK Selector -> enable circuit
+
+  UART INPUT -> enable ciruit -> shift register
+
+  shift register -> parity circuit -> parity led
+  shift register -> output pins
+  
+  */ 
 endmodule
