@@ -9,12 +9,17 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This is a redo of a very minimal UART reviever which I made as Matura-Project in Gymnasium. [Hackaday Link](https://hackaday.io/project/189419-analogdiscrete-uart-reciever). It can switch between a internal and external clock signal, and will automaticly detect when there is a UART message coming into the input. Then it activates the shift register to sample the input and will stop sampling when the start bit has travelled through the shift register. A Parity Check will be done, and the result outputted.
+
+UART INPUT: rx_i
+CLK INPUT: clk_i
+
+output: all the recieved bits and the parity match signal.
 
 ## How to test
 
-Explain how to use your project
+Send a UART message to the input and watch if the data bits match what you sended
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+UART Input, (optional) CLK Input, LED Output
